@@ -1,9 +1,13 @@
 class Solution(object):
     def minOperations(self, nums):
-        
-        operation = 0
 
-        for i in range(1,len(nums)):
+        res = 0
+        n = len(nums)
+
+        for i in range(1, n):
             if nums[i] < nums[i-1]:
-                operation+=nums[i-1] - nums[i]
-        return operation
+                res += nums[i-1] - nums[i]
+
+        return res
+
+
