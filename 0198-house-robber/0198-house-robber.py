@@ -1,15 +1,19 @@
 class Solution(object):
     def rob(self, nums):
 
-        rob, norob = 0, 0
+#r = Rob the house
+#nr = Do not rob the house
+#newR = new Robbing value
+#newNR = new not robbing value
+
+        r, nr = 0, 0
 
         for num in nums:
+            newR = nr + num
+            newNR = max(r, nr)
+            r, nr = newR, newNR
 
-            newRob = norob + num
-            newNoRob = max(norob, rob)
-            rob, norob = newRob, newNoRob
-            
-        return max(rob, norob)
+        return max(r, nr)
         
 
 #Rough work:
