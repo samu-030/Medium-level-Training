@@ -11,7 +11,7 @@ class Solution(object):
                 if s[i-k] in vowels:
                     current -= 1
 
-            if s[i] in vowels:
+            if v in vowels:
                 current += 1
         
             res = max(current, res)
