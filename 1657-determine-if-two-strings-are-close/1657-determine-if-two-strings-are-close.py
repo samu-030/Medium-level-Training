@@ -2,7 +2,8 @@ from collections import Counter
 
 class Solution(object):
     def closeStrings(self, word1, word2):
-
+        
+#Method 1 : Using Counter and comparing keys
         if len(word1)  != len(word2):
             return False
 
@@ -14,6 +15,7 @@ class Solution(object):
 
         return True if sorted(c1.values()) == sorted(c2.values()) else False
 
+#Method 2 : Using frequency array and comparing them
         """if len(word1) != len(word2):
             return False
 
