@@ -10,4 +10,3 @@ class Solution(object):
                 arr[i+1] = arr[i] + 1
 
         return arr[-1]
-        
