@@ -1,17 +1,15 @@
 class Solution(object):
     def findClosestElements(self, arr, k, x):
 
-        def custom_sorting_rule(num):
-            distance = abs(num - x)
-            return (distance, num)
-        
-        sorted_by_distance = sorted(arr, key=custom_sorting_rule)
-        
-        closest_k_elements = sorted_by_distance[:k]
-        
-        final_sorted_result = sorted(closest_k_elements)
-        
-        return final_sorted_result
+        left = 0
+        right = len(arr)-k
+        while left < right :
+            mid = (left+right)//2
+            if x - arr[mid] > arr[mid+k] - x :
+                left = mid+1
+            else :
+                right = mid
+        return arr[left:left+k]
 
 
 """arr.sort()
