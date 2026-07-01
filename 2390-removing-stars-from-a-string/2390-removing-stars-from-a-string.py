@@ -4,14 +4,22 @@ class Solution(object):
         res = []
 
         for i in s:
-            if i == "*":
+            if i != "*":
+                res.append(i)
+            else:
                 if res:
                     res.pop()
-
-            else:
-                res.append(i)
-
         return "".join(res)
+
+"""for i in s:
+    if i == "*":
+        if res:
+            res.pop()
+
+    else:
+        res.append(i)"""
+
+        
         
 
 #Does not work, just tried:
