@@ -8,7 +8,7 @@ class Solution(object):
 
         for pos, spd in cars:
 
-            time =float(target - pos) / spd
+            time = float(target - pos) / spd
 
             if time > prev_time:
                 fleet += 1
