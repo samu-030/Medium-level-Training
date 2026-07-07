@@ -1,6 +1,6 @@
-class Solution:
-    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
-        
+class Solution(object):
+    def carFleet(self, target, position, speed):
+
         fleet = 0
         prev_time = 0
 
@@ -8,10 +8,11 @@ class Solution:
 
         for pos, spd in cars:
 
-            time = (target - pos) / spd
+            time =float(target - pos) / spd
 
             if time > prev_time:
                 fleet += 1
                 prev_time = time
 
         return fleet
+        
