@@ -8,7 +8,6 @@ class Solution(object):
         
         LL_arr = []
         temp = head
-        res = []
 
         while temp != None:
             LL_arr.append(temp.val)
@@ -16,14 +15,15 @@ class Solution(object):
 
         left = 0
         right = len(LL_arr)-1
+        max_sum = 0
 
         while(left < right):
             sum_ = LL_arr[left] + LL_arr[right]
-            res.append(sum_)
+            max_sum = max(max_sum, sum_)
 
             left+=1
             right-=1
 
-        return max(res)
+        return max_sum
 
         
