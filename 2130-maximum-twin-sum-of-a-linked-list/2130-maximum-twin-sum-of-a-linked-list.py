@@ -19,8 +19,9 @@ class Solution(object):
 
         while(left < right):
             sum_ = LL_arr[left] + LL_arr[right]
-            max_sum = max(max_sum, sum_)
-
+            if max_sum < sum_:
+                max_sum = sum_
+                
             left+=1
             right-=1
 
