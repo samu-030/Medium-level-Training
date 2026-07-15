@@ -1,6 +1,15 @@
-class Solution:
-    def gcdOfOddEvenSums(self, n: int) -> int:
+class Solution(object):
+    def gcdOfOddEvenSums(self, n):
+
         odd = n * n
         even = n * (n + 1)
 
-        return gcd(odd, even)
+        while even:
+            odd, even = even, odd % even
+
+        return odd
+
+        
+
+
+        
