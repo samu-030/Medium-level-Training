@@ -23,6 +23,8 @@ class Solution(object):
 
         return max_steps
 
+#Brute force method : used an extra space and traversed until non decreasing order !!
+
 """steps = 0
 
 while True:
