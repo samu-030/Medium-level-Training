@@ -7,7 +7,7 @@ class Solution(object):
         moves = 0
 
         for i in nums:
-            moves += abs(i - median)
+            moves += abs(median - i)
 
         return moves
         
