@@ -14,3 +14,19 @@ class Solution(object):
                 res.append(num)
 
         return res
+
+"""
+ans=[]
+n=len(nums)
+
+hash={}
+for num in nums:
+    hash[num]=hash.get(num,0)+1
+
+for key in hash:
+    if hash[key]>n//3:
+        ans.append(key)
+
+return ans
+"""
+        
