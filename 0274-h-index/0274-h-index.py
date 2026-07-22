@@ -4,8 +4,10 @@ class Solution(object):
         n = len(citations)
         citations.sort()
 
-        for i, v in enumerate(citations):
-            if n - i <= v:
-                return n-i
+        for i in range(n):
+            rem = n - i
+
+            if citations[i] >= rem:
+                return rem
 
         return 0
