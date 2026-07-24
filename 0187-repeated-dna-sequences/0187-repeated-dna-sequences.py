@@ -13,10 +13,12 @@ class Solution(object):
 
         while(r < n):
 
-            if s[l : r+1] in seen:
-                res.add(s[l : r+1])
+            curr_seq = s[l : r+1] 
+
+            if curr_seq in seen:
+                res.add(curr_seq)
             else:
-                seen.add(s[l : r+1])
+                seen.add(curr_seq)
 
             l += 1
             r += 1
