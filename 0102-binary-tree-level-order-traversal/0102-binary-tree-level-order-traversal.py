@@ -17,20 +17,22 @@ class Solution(object):
 
         while queue:
             lvl_size = len(queue)
-            curr_lvl = []
+            curr_vals = []
 
             for _ in range(lvl_size):
                 curr = queue.popleft()
-                curr_lvl.append(curr.val)
+                curr_vals.append(curr.val)
 
                 if curr.left:
                     queue.append(curr.left)
                 if curr.right:
                     queue.append(curr.right)
 
-            res.append(curr_lvl)
+            res.append(curr_vals)
 
         return res
+
+
 
 """queue = deque()
 queue.append(root)
