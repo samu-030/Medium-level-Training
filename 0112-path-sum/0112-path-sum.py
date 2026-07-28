@@ -10,9 +10,18 @@ class Solution(object):
         if root is None:
             return False
 
-        targetSum -= root.val
-
         if root.left == None and root.right == None:
-            return targetSum == 0
+            return targetSum == root.val
 
-        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
+        return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
+
+
+"""if root is None:
+    return False
+
+targetSum -= root.val
+
+if root.left == None and root.right == None:
+    return targetSum == 0
+
+return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)"""
